@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BundlesCompanionContract</string>
+    <string name="cancelled">Result Cancelled</string>
 </resources>

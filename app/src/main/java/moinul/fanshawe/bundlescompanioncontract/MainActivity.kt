@@ -11,6 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import moinul.fanshawe.bundlescompanioncontract.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -74,7 +75,9 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Result OK", Toast.LENGTH_SHORT).show()
             }
             Activity.RESULT_CANCELED -> {
-                Toast.makeText(this, "Result Cancelled", Toast.LENGTH_SHORT).show()
+                var view:View = findViewById(R.id.main)
+                val snack = Snackbar.make(view, getString(R.string.cancelled), Snackbar.LENGTH_LONG)
+                snack.show()
             }
         }
     }
