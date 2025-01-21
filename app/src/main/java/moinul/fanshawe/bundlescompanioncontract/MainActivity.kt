@@ -75,9 +75,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Result OK", Toast.LENGTH_SHORT).show()
             }
             Activity.RESULT_CANCELED -> {
-                var view:View = findViewById(R.id.main)
-                val snack = Snackbar.make(view, getString(R.string.cancelled), Snackbar.LENGTH_LONG)
-                snack.show()
+                Toast.makeText(this, "Result Cancelled", Toast.LENGTH_SHORT).show()
             }
         }
     }
